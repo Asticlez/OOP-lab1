@@ -1,0 +1,137 @@
+﻿Q1.
+
+cd lab1
+javac Book.java BookDemo.java
+java BookDemo
+
+Result:
+
+Developing Java Software
+Russel Winder
+
+Because the println statements only use getTitle() and getAuthor(), so the price isn’t printed.
+
+=================================================================================================
+
+Q2.
+
+javac Employee.java EmployeeTest.java
+java -ea EmployeeTest
+
+Result:
+
+Alex Lee: monthly salary 0.00
+Sam Chen: monthly salary 3000.00
+Before 10% raise:
+Oak Wong: yearly salary 24000.00
+Two Tan: yearly salary 48000.00
+After 10% raise:
+Oak Wong: yearly salary 26400.00
+Two Tan: yearly salary 52800.00
+Employee tests completed.
+
+Explanation:
+Alex Lee starts with a salary of 0 because no salary was given to the constructor.
+The setters change the name to Sam Chen and the monthly salary to 3000.
+Trying to set the salary to 0 or -100 leaves it at 3000.
+
+Oak and Two are two separate employees used to test the raise:
+Oak: 2000 per month x 12 = 24000 per year.
+Two: 4000 per month x 12 = 48000 per year.
+After the 10% raise:
+Oak: 2200 per month x 12 = 26400 per year.
+Two: 4400 per month x 12 = 52800 per year.
+
+=================================================================================================
+
+Q3.
+
+javac Employee.java EmployeeTeam.java EmployeeTeamTest.java
+java -ea EmployeeTeamTest
+
+Result:
+
+Employee only:
+Two Tan: monthly salary 2000.00
+Whole team:
+Oak Wong: monthly salary 5000.00
+Two Tan: monthly salary 2000.00
+After 10% raise:
+Oak Wong: monthly salary 6600.00
+Two Tan: monthly salary 2750.00
+After updating both matching first names:
+Oak Wong: monthly salary 7000.00
+Oak Tan: monthly salary 7000.00
+EmployeeTeam tests completed.
+
+Explanation:
+"Employee only" prints Two Tan. "Whole team" prints both Oak Wong and Two Tan.
+Their starting monthly salaries are 5000 and 2000.
+
+Before giving the raise, the test changes Oak's salary to 6000 and Two's to 2500.
+These changes are not printed separately, which is why the numbers jump in the output.
+The 10% raise then gives:
+Oak: 6000 + 600 = 6600.
+Two: 2500 + 250 = 2750.
+
+Next, the test changes Two's first name to Oak.
+Updating the salary for the name "Oak" now finds both people, so both get 7000.
+
+=================================================================================================
+
+Q4.
+
+javac Account.java AccountTest.java
+java -ea AccountTest
+
+Result:
+
+Oak: initial balance 100.00
+Two: balance after deposits 150.00
+Account tests completed.
+
+Explanation:
+The account starts with the name Oak and a balance of 100.
+setName("Two") changes the name on the same account.
+deposit(50) adds 50, so the balance becomes 100 + 50 = 150.
+The test also tries deposit(0) and deposit(-20), but neither changes the balance.
+That is why the second line shows Two with a balance of 150.
+
+The test also checks that starting balances of 0 and -100 both become 0.
+These checks do not print their balances.
+
+=================================================================================================
+
+Q5.
+
+javac Account.java AccountList.java AccountListTest.java
+java -ea AccountListTest
+
+Result:
+
+Input index exceeds the number of appended elements
+null
+0.1
+false
+Input index exceeds the number of appended elements
+Input index exceeds the number of appended elements
+Input index exceeds the number of appended elements
+AccountList tests completed.
+
+Explanation:
+The list can hold 3 accounts. At first, only Oak and Two have been added.
+Array indices start at 0, so Oak is at index 0 and Two is at index 1.
+
+The first error message appears because getAccount(2) asks for a third account
+before one has been added. It returns null, which is printed on the next line.
+The 0.1 is Two's balance, read from the account at index 1.
+
+Adding the third account fills the list. Trying to add a fourth returns false,
+so false is printed. The fourth account is not added.
+
+The last three error messages are from three more checks:
+- Index -1 is invalid.
+- Index 3 is outside the full list; its valid indices are 0, 1, and 2.
+- Index 0 cannot be read from a separate empty list.
+
+These error messages are expected results of the tests.
