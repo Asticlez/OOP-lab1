@@ -1,0 +1,9 @@
+# Compiled Java output
+out/
+bin/
+build/
+target/
+*.class
+*.jar
+# Local PDF inspection tools and extracted pages
+.tools/
