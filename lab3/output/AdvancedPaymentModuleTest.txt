@@ -1,0 +1,4 @@
+﻿After array payment: 64000.0
+After single payment: 65000.0
+After repeated array: 129000.0
+AdvancedPaymentModuleTest passed (both overloads and accumulation).

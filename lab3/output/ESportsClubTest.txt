@@ -1,0 +1,7 @@
+﻿Name: Esport, members: 1, minimum: 1
+No need to advertise
+Budget: 1000
+Name: Esport, members: 1, minimum: 1
+No need to advertise
+Budget: 1000
+ESportsClubTest passed (constructors, overriding and Club references).

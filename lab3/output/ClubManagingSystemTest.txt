@@ -1,0 +1,4 @@
+﻿Highest member club: Student
+Total budget: 257200
+Total members: 255
+ClubManagingSystemTest passed (PDF data, empty list and ties).

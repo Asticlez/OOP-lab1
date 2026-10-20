@@ -1,0 +1,6 @@
+﻿Employee: accumulated pay = 0.0
+Fulltimer: accumulated pay = 30000.0
+Hourly: accumulated pay = 32000.0
+Manager: accumulated pay = 42000.0
+Manager: accumulated pay = 64000.0
+PaymentModuleTest passed (all types and 10/11-year boundary).
